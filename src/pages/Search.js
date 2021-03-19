@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import API from "../utils/API";
 import SearchForm from "../components/SearchForm";
+import SearchResults from "../components/SearchResult";
+
 
 
 class Search extends Component {
@@ -14,7 +16,7 @@ class Search extends Component {
 
     componentDidMount(){
         API.getUsers()
-        .then(res => this.setState({ users: res.data.results}))
+        .then(res => this.setState({ results: res.data.results}))
         .catch(err => console.log(err));
     }
 
@@ -42,6 +44,7 @@ class Search extends Component {
                     handleInputChange={this.handleInputChange}
                     users={this.state.users}
                 />
+                <SearchResults results={this.state.results} />
             </div>
         )
     }
