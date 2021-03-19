@@ -1,0 +1,10 @@
+.navbar-dark{
+    height: 80px;
+}
+
+a.navbar-brand{
+    font-size:28px;
+}   
+.navbar-dark .navbar-brand {
+    color: rgb(163, 228, 219) !important;
+}
