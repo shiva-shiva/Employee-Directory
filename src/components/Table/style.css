@@ -1,4 +1,17 @@
 .table {
+   
     margin: auto;
     width: 80% !important; 
  }
+
+ .table-responsive{
+    margin-top:90px;
+ }
+
+ .table th, .table td {
+    border-top: 2px solid #22d47b!important;
+}
+
+tr:nth-child(even) {
+    background-color: #e2f5eb
+  }

@@ -1,14 +1,16 @@
 
 import Navbar from './components/Navbar';
 import MainContainer from './pages/MainContainer';
+import Wrapper from './components/Wrapper';
+
 import './App.css';
 function App() {
   return (
     <div className="App">
-      <wrapper>
+      <Wrapper>
       <Navbar/>
       <MainContainer/>
-      </wrapper>
+      </Wrapper>
     </div>
   );
 }

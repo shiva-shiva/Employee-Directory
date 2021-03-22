@@ -8,3 +8,5 @@ function Wrapper({children}){
         </div>
     )
 }
+
+export default Wrapper;
