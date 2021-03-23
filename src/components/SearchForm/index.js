@@ -8,6 +8,7 @@ function SearchForm(props) {
             <form className="employee-form">
                 <div className="form-group d-md-flex">
                  <input 
+                  autocomplete="off"
                   value={props.search}
                   onChange={props.handleInputChange}
                   type="text"
