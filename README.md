@@ -44,7 +44,6 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
     React
     JavaScript library 
-    Express - Node Framework 
     Heroku - Used to deploy application
 
 ##  Heroku Link
