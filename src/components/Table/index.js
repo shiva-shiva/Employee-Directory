@@ -8,15 +8,15 @@ function Table(props){
             <thead>
                 <tr>
                 <th>Image</th>
-                <th>Name</th>
+                <th >Name <button className='filter' onClick={props.sortName}><i className="fas fa-sort-up"></i></button></th>
                 <th>Phone Number <button className='filter' onClick={props.sortNumber}><i className="fas fa-sort-up"></i></button></th>
                 <th>Email <button className='filter' onClick={props.sortEmail}><i className="fas fa-sort-up"></i></button></th>
                 <th>Location</th>
                 </tr>
             </thead>
             <tbody>
-                {props.list.map(user => 
-                <tr>
+                {props.list.map(user  => 
+                <tr key={user.login.uuid}>
                 <td>
                     <img src={user.picture.thumbnail} alt="profile"/>
                 </td>

@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Wrapper>
-      <Navbar/>
-      <MainContainer/>
+        <Navbar/>
+        <MainContainer/>
       </Wrapper>
     </div>
   );

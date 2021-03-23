@@ -23,10 +23,10 @@ function MainContainer(){
         setUsers(searchedUser)
     }
 
-    function clearSearch(){
+   /* function clearSearch(){
         setSearch("")
         getRandomUsers()
-    }
+    }*/
 
     function handleInputChange(event){
         setSearch(event.target.value)
@@ -36,6 +36,9 @@ function MainContainer(){
     function handleFormSubmit(event){
         event.preventDefault()
         getSearchResults()
+        if (search ===""){
+            getRandomUsers()
+        }
     }
 
     function sortEmail(){
@@ -62,24 +65,26 @@ function MainContainer(){
             }
             return 0
         })
-        console.log('Sorted List: ', sorted)
         setUsers([...sorted])
     }
+    function sortName(){
+        const sorted = users.sort( function(item1, item2){
+            if(item1.name.first < item2.name.first){
+                return -1
+            }
+            if (item1.name.first > item2.name.first){
+                return 1
+            }
+            return 0
+        })
+        setUsers([...sorted])
+    }
+
  
     return(
-        /*<div className="container" style={{marginTop: "20px", marginBottom: "20px"}}>
-            {/* search function */
-           /* <div className="input-group mb-3 float-center">
-                <input value={search} onChange={handleInputChange} type="text" className="form-control" placeholder="Search Employee by Name" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-                <button className="btn btn-outline-danger" onClick={clearSearch}><i class="fas fa-window-close"></i></button>
-                <button onClick={handleFormSubmit} className="btn btn-outline-primary" type="submit" id="button-addon2">Search</button>
-            </div>
-            <div style={{display: "flex", justifyContent: "center",  margin: "auto", color: "gray"}}>
-                <p><small>Hover over the Phone Number or Email to Sort Employees</small></p>
-            </div>*/
-            <div>
+            <div className="container">
             <SearchForm value={search} handleInputChange={handleInputChange} handleFormSubmit={handleFormSubmit}/>
-            <Table list={users} sortEmail={sortEmail} sortNumber={sortNumber}/>
+            <Table list={users} sortEmail={sortEmail} sortNumber={sortNumber} sortName={sortName}/>
         </div>
     )
 }
