@@ -18,18 +18,14 @@ function MainContainer(){
 
     function getSearchResults(){
         console.log('Searching for:', search)
-        const searchedUser = users.filter(user => search.indexOf(user.name.first)> -1 || search.indexOf(user.name.last)> -1)
+        const searchedUser = users.filter(user => search.toLowerCase().indexOf(user.name.first.toLowerCase())> -1 || search.toLowerCase().indexOf(user.name.last.toLowerCase())> -1)
         console.log(searchedUser)
         setUsers(searchedUser)
     }
 
-   /* function clearSearch(){
-        setSearch("")
-        getRandomUsers()
-    }*/
 
     function handleInputChange(event){
-        setSearch(event.target.value)
+       setSearch(event.target.value)
         console.log(event.target.value)
     }
 
