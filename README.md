@@ -8,7 +8,7 @@
 
 ## Description 
 
-A web application that lists all employees in one directory using React. The user can search employees by their first or last name, or sort the employees by their phone number or email address and name.<h4>Click [here](https://polar-sierra-07545.herokuapp.com/) for deployed application.</h4>
+A web application that lists all employees in one directory using React. The user can search employees by their first or last name, or sort the employees by their phone number or email address and name.<h4>Click [here](https://shiva-shiva.github.io/Employee-Directory/) for deployed application.</h4>
 
 ## Business Context
 
@@ -23,7 +23,6 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 * [Description](#Description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Heroku Link](#Heroku)
 * [license](#license)
 
 ## Installation
@@ -45,9 +44,6 @@ An employee or manager would benefit greatly from being able to view non-sensiti
     React
     JavaScript library 
     Heroku - Used to deploy application
-
-##  Heroku Link
-  https://polar-sierra-07545.herokuapp.com/
 
 ## 📝License
 MIT License<br/>
